@@ -1,10 +1,9 @@
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -16,7 +15,9 @@ public class Country {
 	@Column(name = "country_id")
 	private long id;
 
-	@Column(name = "country")
-	private String name;
+	private String country;
+
+	@Convert(converter = DaNetBooleanConverter.class)
+	private Boolean active;
 
 }

@@ -5,6 +5,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import javax.persistence.EntityManager;
+
 public class Runner {
 	public static void main(String[] args) {
 		StandardServiceRegistry serviceRegistry
