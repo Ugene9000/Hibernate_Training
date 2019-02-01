@@ -22,10 +22,13 @@ public class Runner {
 		try {
 			Session session = sessionFactory.openSession();
 			Transaction transaction = session.beginTransaction();
-			Country country = session.find(Country.class, 1L);
-			System.out.println(country);
 
-			transaction.commit();
+			// logic
+			Country country = session.find(Country.class, 1L);
+//			country.setCountry("Afganistan12");
+//			country.setActive(false);
+//			transaction.commit();
+			System.out.println(country);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
