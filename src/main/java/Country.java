@@ -16,8 +16,7 @@ import java.time.Instant;
 public class Country {
 
 	@Id
-	@Column(name = "country_id")
-	private long id;
+	private Long countryId;
 
 	private String country;
 
